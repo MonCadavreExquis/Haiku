@@ -84,7 +84,8 @@ const SKT = function(){
   let paysage2;
 
   let rand;
-
+let col0;
+let col1;
   let button;
 
 
@@ -117,7 +118,8 @@ const SKT = function(){
     imagesLoading("paysage8.png");
     imagesLoading("paysage9.png");
    
-
+col0 = (255,0,0,255);
+col1 = (0,0,255,255);
 
     //CANVAS
     can = p.createCanvas(p.windowWidth*0.9, p.windowHeight*0.9);
@@ -199,11 +201,14 @@ const SKT = function(){
     } else {
     p.background(0);
         //BUTTON
+	
         button = p.createButton("Nouvel arrière-plan");
         button.mousePressed(p.rerun);
         button.position(p.windowWidth*0.25,p.windowHeight*0.02);
-        button.size(p.windowHeight * 0.2, p.windowHeight * 0.03)
+        button.size(p.windowHeight * 0.1, p.windowHeight * 0.02)
         button.style('font-size', p.windowHeight * 0.01 + 'px');
+	button.style('background-color', col1);
+	button.style('color', col0);
       
   if (!selectImages) {
         //RANDOM
@@ -266,9 +271,9 @@ const SKT = function(){
       
       p.imageMode(p.CENTER);
     p.tint(255, 0, 0,alph0);
-    p.image(paysage1, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
+    p.image(paysage1, p.windowWidth/2*0.9, p.windowHeight/2*0.8,p.windowHeight*0.8,p.windowHeight*0.6);
     p.tint(0, 0, 255,alph1);
-    p.image(paysage2, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
+    p.image(paysage2, p.windowWidth/2*0.9, p.windowHeight/2*0.8,p.windowHeight*0.8,p.windowHeight*0.6);
           
          
            if(revers){
