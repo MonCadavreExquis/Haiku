@@ -308,27 +308,8 @@ col1 = (0,0,255,255);
     p.image(paysage1, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
     p.tint(0, 0, 255);
     p.image(paysage2, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
-          
-         
-           if(revers){
-      alph0 -= factor;
-        alph1 +=factor;
-    }else{
-    alph0 += factor;
-    alph1 -=factor;
-    
-    }
-    
-    if (alph0<0){
-        revers = !revers;
-    }
-    if (alph1 <0){
-      revers = !revers;
-    }
-         
-   }
-  
-  };
+}
+};
 };
 };
 
@@ -489,6 +470,8 @@ Noms
 
 
 
+	
+	
 
 (link:&quot;mirage&quot;)[(set: $mirage to (dm: &quot;simple&quot;, &quot;mirage&quot;,&quot;genre&quot;, &quot;m&quot;, &quot;pluriel&quot;, &quot;mirages&quot;, &quot;un&quot;, &quot;un mirage&quot;, &quot;le&quot;, &quot;le mirage&quot;, &quot;de le&quot;, &quot;du mirage&quot;, &quot;a le&quot;, &quot;au mirage&quot;,  &quot;syl&quot;, 2, &quot;syl un&quot;, 3, &quot;syl le&quot;, 3, &quot;syl de le&quot;, 3, &quot;syl a le&quot;, 3))\
 (set: $noms to it + (a:$mirage))\
