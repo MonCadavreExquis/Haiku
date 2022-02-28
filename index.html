@@ -120,7 +120,7 @@ const SKT = function(){
   let rand;
 let col0;
 let col1;
-  let butt;
+  let button;
 
 
    function imagesLoading(filename) {
@@ -156,7 +156,7 @@ col0 = (255,0,0,255);
 col1 = (0,0,255,255);
 
     //CANVAS
-    can = p.createCanvas(p.windowWidth, p.windowHeight);
+    can = p.createCanvas(p.windowWidth*0.9, p.windowHeight*0.9);
     can.position(0,0);
 
   };
@@ -236,13 +236,13 @@ col1 = (0,0,255,255);
     p.background(0);
         //BUTTON
 	
-        butt = p.createButton("Nouvel arrière-plan");
-        butt.mousePressed(p.rerun);
-        butt.position(p.windowWidth*0.3,p.windowHeight*0.02);
-        butt.size(p.windowHeight * 0.3, p.windowHeight * 0.05);
-        butt.style('font-size', p.windowHeight * 0.02 + 'px');
-	butt.style('background-color', col1);
-	butt.style('color', col0);
+        button = p.createButton("Nouvel arrière-plan");
+        button.mousePressed(p.rerun);
+        button.position(p.windowWidth*0.3,p.windowHeight*0.02);
+        button.size(p.windowHeight * 0.3, p.windowHeight * 0.05);
+        button.style('font-size', p.windowHeight * 0.02 + 'px');
+	//button.style('background-color', col1);
+	//button.style('color', col0);
       
   if (!selectImages) {
         //RANDOM
@@ -305,9 +305,9 @@ col1 = (0,0,255,255);
       
       p.imageMode(p.CENTER);
     p.tint(255, 0, 0,alph0);
-    p.image(paysage1, p.windowWidth/2, p.windowHeight/2,p.windowHeight*0.8,p.windowHeight*0.6);
+    p.image(paysage1, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
     p.tint(0, 0, 255,alph1);
-    p.image(paysage2, p.windowWidth/2, p.windowHeight/2,p.windowHeight*0.8,p.windowHeight*0.6);
+    p.image(paysage2, p.windowWidth/2*0.9, p.windowHeight/2*0.9,p.windowHeight*0.8,p.windowHeight*0.6);
           
          
            if(revers){
